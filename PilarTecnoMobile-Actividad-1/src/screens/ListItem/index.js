@@ -33,10 +33,10 @@ export default ListItem = (props) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   useEffect(() => {
-    console.log(JSON.stringify(props));
+    console.log(JSON.stringify(url));
     getPokemon(url).then((data) => {
       const path = url.split("/");
-      setPokemon(data.results);
+      setPokemon(data);
       setImgId(getPokemonImgId(path[6]));
     });
   });
