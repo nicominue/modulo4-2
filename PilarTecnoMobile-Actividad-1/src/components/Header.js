@@ -19,6 +19,7 @@ const height = Dimensions.get("window").height;
 export default Header = (props) => {
 
   const {colors, headerHeight} = theme
+  const { leftIcon, leftAction, title } = props
 
   const _rocket = () => {
     Alert.alert('Cohete', 'Presionaste el cohete', 
@@ -47,7 +48,7 @@ export default Header = (props) => {
             </TouchableOpacity>
         </View>
     }
-    centerComponent={{ text: 'PilarTecno', style: { color: '#fff' } }}
+    centerComponent={{ text: title?title: 'PilarTecno', style: { color: '#fff' } }}
     />
     </View>
     )

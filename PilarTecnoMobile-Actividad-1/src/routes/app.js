@@ -5,6 +5,7 @@ import List from "../screens/List";
 import Profile from "../screens/Profile";
 import Mapa from "../screens/Mapa";
 import Login from "../screens/Auth/SingIn"
+import ListItem from '../screens/ListItem';
 import {Tabs} from "./Tabs";
 import { useSelector } from 'react-redux';
 
@@ -23,6 +24,7 @@ const AppStack = () => {
         }
         
         <Stack.Screen name="List" component={List} />
+        <Stack.Screen name="ListItem" component={ListItem} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Map" component={Mapa} />
       </Stack.Navigator>
